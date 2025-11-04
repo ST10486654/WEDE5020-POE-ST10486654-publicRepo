@@ -12,3 +12,16 @@
    - Error prevention & clear recovery
    - Aesthetic minimalism with motion for delight
    ============================================================ */
+
+   /* =======================
+   1. Smooth Page Animation
+   ======================= */
+// Fade-in hero text for emotional engagement (Don Norman – visceral design)
+document.addEventListener("DOMContentLoaded", () => {
+  const heroText = document.querySelector(".hero h1");
+  if (heroText) {
+    heroText.style.opacity = 0;
+    heroText.style.transition = "opacity 2s ease-in";
+    setTimeout(() => (heroText.style.opacity = 1), 300);
+  }
+});
