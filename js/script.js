@@ -46,3 +46,36 @@ serviceTitles.forEach(title => {
     }
   }
 });
+
+/* =======================================
+   3. Lightbox Gallery for Product Images
+   =======================================
+   Principle: Aesthetic integrity + user control (Cooper – About Face)
+*/
+function initLightbox() {
+  const images = document.querySelectorAll(".menu-preview img");
+  if (!images.length) return;
+
+  const overlay = document.createElement("div");
+  overlay.id = "lightbox";
+  overlay.style.cssText = `
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.8); display:none; justify-content:center;
+    align-items:center; z-index:9999;
+  `;
+  const img = document.createElement("img");
+  img.style.maxWidth = "90%";
+  img.style.maxHeight = "90%";
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+
+  images.forEach(pic => {
+    pic.style.cursor = "zoom-in";
+    pic.addEventListener("click", () => {
+      img.src = pic.src;
+      overlay.style.display = "flex";
+    });
+  });
+  overlay.addEventListener("click", () => (overlay.style.display = "none"));
+}
+initLightbox();
