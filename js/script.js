@@ -185,6 +185,19 @@ document.addEventListener("keyup", e => {
   }
 });
 
+/* ==========================================
+   8. Footer Year Auto-Update
+   ==========================================
+   Keeps content current (reduces maintenance)
+*/
+const footers = document.querySelectorAll("footer p");
+footers.forEach(f => {
+  if (f.textContent.includes("©")) {
+    f.textContent = `© ${new Date().getFullYear()} CoffeeBox`;
+  }
+});
+
+
 
 
 
