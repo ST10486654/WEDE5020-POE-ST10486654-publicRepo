@@ -25,3 +25,24 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => (heroText.style.opacity = 1), 300);
   }
 });
+
+/* =================================
+   2. Accordion for Services Section
+   =================================
+   Keeps long text digestible (Krug – “Don’t make me think”).
+*/
+const serviceTitles = document.querySelectorAll("h2");
+serviceTitles.forEach(title => {
+  if (title.textContent.toLowerCase().includes("services")) {
+    const nextList = title.nextElementSibling;
+    if (nextList && nextList.tagName === "UL") {
+      // Wrap list in a container for toggling
+      nextList.style.display = "none";
+      title.style.cursor = "pointer";
+      title.addEventListener("click", () => {
+        nextList.style.display = nextList.style.display === "none" ? "block" : "none";
+        title.style.color = nextList.style.display === "block" ? "#f6c518" : "#fff";
+      });
+    }
+  }
+});
