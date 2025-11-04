@@ -1,0 +1,73 @@
+1. hero-coffee.jpg
+https://www.istockphoto.com/nl/foto/barista-making-a-cup-of-coffee-latte-art-gm2169342128-589335432
+Date: 29 September 2025
+
+****************************************************************************************************
+
+2. 
+Company Information:
+
+Everything About CoffeeBox (history, mission, vision, locations, social media):
+
+CoffeeBox official website (www.coffeeboxsa.co.za)
+
+CoffeeBox Instagram page. (www.instagram.com/coffeeboxsa/)
+CoffeeBox Instagram 2025
+
+Articles about CoffeeBox  
+(i) Coffee Magazine (https://magazine.coffee/), 
+Coffee Magazine 2019
+(ii) Pinnacle Schools blog (www.pinnacle-schools.com/2023/05/10/collage-coffeebox/)
+
+****************************************************************************************************
+
+3.
+Technical Info
+
+All About The Stack and tools:
+
+HTML5
+
+CSS3
+
+GitHub (repo hosting)
+
+VS Code (IDE you used) 
+
+****************************************************************************************************
+
+5. Maps
+
+I embedded Google Maps:
+
+Google Maps.
+Date: 2025. 
+Address: CoffeeBox Athlone Circle, Pietermaritzburg. 
+[Online] Available at: https://www.google.com/maps/place/1+Montgomery+Dr,+Pietermaritzburg,+KZN,+South+Africa
+
+****************************************************************************************************
+
+6. Design Inspiration:
+
+6.1 The Color theme was inspiried by CoffeeBox Website.
+    Address: www.coffeeboxsa.co.za
+    Date Accessed: 29 Sep 2025
+
+6.2 The Hero section with strong background image + bold tagline,
+
+    The Card-style product display (clear, modern, easy to scan) &
+
+    The Clean navigation bar with brand logo left, links right.
+
+    Was inspired by: Starbucks (Global Coffee Leader)
+
+
+
+
+
+
+
+
+
+
+
