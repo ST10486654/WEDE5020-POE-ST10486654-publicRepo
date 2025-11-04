@@ -131,4 +131,47 @@ if (document.title.includes("About")) {
   });
 }
 
+/* ==========================================
+   6. Form Validation (Enquiry + Contact)
+   ==========================================
+   Real-time feedback to prevent errors (Nielsen)
+*/
+function validateForm(formId, responseId, type) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+  const output = document.getElementById(responseId);
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = form.querySelector("[name='name']").value.trim();
+    const email = form.querySelector("[name='email']").value.trim();
+    const message = form.querySelector("[name='message']").value.trim();
+
+    // Simple pattern check
+    const emailValid = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+
+    if (!name || !emailValid || !message) {
+      output.textContent = "Please complete all fields correctly.";
+      output.style.color = "red";
+      output.style.fontWeight = "bold";
+      return;
+    }
+
+    // Show user feedback
+    if (type === "enquiry") {
+      output.textContent = `Thank you, ${name}! We'll respond soon about your enquiry.`;
+    } else {
+      output.textContent = `Message sent successfully, ${name}! We'll reply via email.`;
+    }
+    output.style.color = "#0f0";
+    output.style.fontWeight = "bold";
+
+    // Reset fields for a clean slate
+    form.reset();
+  });
+}
+validateForm("enquiryForm", "enquiryMessage", "enquiry");
+validateForm("contactForm", "contactMessage", "contact");
+
+
 
