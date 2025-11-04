@@ -79,3 +79,30 @@ function initLightbox() {
   overlay.addEventListener("click", () => (overlay.style.display = "none"));
 }
 initLightbox();
+
+/* =====================================
+   4. Dynamic Search on Products Page
+   =====================================
+   Helps users find info fast (Nielsen – efficiency of use)
+*/
+const searchContainer = document.createElement("div");
+searchContainer.innerHTML = `
+  <input type="text" id="searchBar" placeholder="Search for a drink or snack..." 
+         style="width:90%;padding:0.7rem;margin:1rem;border-radius:6px;border:none;">
+`;
+if (document.title.includes("Products")) {
+  const main = document.querySelector("main");
+  main.insertBefore(searchContainer, main.firstChild);
+
+  const searchBar = document.getElementById("searchBar");
+  searchBar.addEventListener("keyup", e => {
+    const query = e.target.value.toLowerCase();
+    const items = document.querySelectorAll("li");
+    items.forEach(li => {
+      li.style.display = li.textContent.toLowerCase().includes(query)
+        ? "list-item"
+        : "none";
+    });
+  });
+}
+
