@@ -106,3 +106,29 @@ if (document.title.includes("Products")) {
   });
 }
 
+/* ==========================================
+   5. Load Dynamic Testimonials (Simulated)
+   ==========================================
+   Shows dynamic content (visibility + trust)
+*/
+if (document.title.includes("About")) {
+  const section = document.createElement("section");
+  section.innerHTML = `<h2>Customer Stories</h2><div id="reviews"></div>`;
+  document.querySelector("main").appendChild(section);
+
+  const reviews = [
+    { name: "Thabo", text: "Best cappuccino in PMB! Quick and friendly service." },
+    { name: "Sarah", text: "Love the drive-thru convenience every morning." },
+    { name: "Imran", text: "Affordable, delicious, and consistent quality!" }
+  ];
+
+  const reviewContainer = document.getElementById("reviews");
+  reviews.forEach(r => {
+    const card = document.createElement("div");
+    card.style.cssText = "background:#000;margin:1rem;padding:1rem;border-left:3px solid #f6c518;";
+    card.innerHTML = `<p>"${r.text}"</p><p style="color:#f6c518;">– ${r.name}</p>`;
+    reviewContainer.appendChild(card);
+  });
+}
+
+
