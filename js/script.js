@@ -173,5 +173,18 @@ function validateForm(formId, responseId, type) {
 validateForm("enquiryForm", "enquiryMessage", "enquiry");
 validateForm("contactForm", "contactMessage", "contact");
 
+/* ==========================================
+   7. Accessibility & Keyboard Navigation
+   ==========================================
+   Inclusive design (UX principle: accessibility)
+*/
+document.addEventListener("keyup", e => {
+  if (e.key === "Escape") {
+    const lb = document.getElementById("lightbox");
+    if (lb && lb.style.display === "flex") lb.style.display = "none";
+  }
+});
+
+
 
 
