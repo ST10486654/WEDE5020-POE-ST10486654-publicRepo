@@ -1,6 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/BJNsMpBi)
 # CoffeeBox — Drive-Thru Website (Part 1: HTML Corrections)  
-**Student Number:** ST10486654  
 **Subject:** Website Development (WEDE5020/p/W)  
 **Date:** 2025-09-28  
 
@@ -121,6 +120,99 @@ See [references.txt](references.txt).
 
 
 <img width="1366" height="768" alt="HAW1-React-Native-2025-v2 (31) - lab-09c87ae5-0636-4bb7-bc74-001c1e2d19d9 westeurope cloudapp azure com_7002 - Remote Desktop Connection 23_9_2025 07_52_04" src="https://github.com/user-attachments/assets/cdcd9f80-be0a-44a7-81ec-beb91e7285c2" />
+
+*******************************************************************************************************************************************************************************
+*******************************************************************************************************************************************************************************
+04 Novmeber 2025 - POE
+
+# CoffeeBox Website – WEDE5020 POE  
+**Name:** Dumolwenkosi M Gwetu 
+**Number:** ST10486654 
+**Repository:** [https://github.com/ST10486654/WEDE5020-POE-ST10486654-publicRepo](https://github.com/ST10486654/WEDE5020-POE-ST10486654-publicRepo)  
+**Live Site:** [https://st10486654.github.io/WEDE5020-POE-ST10486654-publicRepo/](https://st10486654.github.io/WEDE5020-POE-ST10486654-publicRepo/)
+
+---
+
+## 📖 Project Overview
+CoffeeBox is a fully responsive, SEO-optimized drive-thru coffee shop website inspired by the real CoffeeBox brand in Pietermaritzburg.  
+The website showcases strong UI/UX design, interactivity, accessibility, and professional coding standards.
+
+---
+
+## 🏗️ Structure and Features
+| Section | File | Description |
+|----------|------|-------------|
+| Home | `index.html` | Hero animation, introduction, navigation links |
+| About | `about.html` | Mission, vision, and dynamically loaded customer testimonials |
+| Products | `products.html` | Interactive product gallery with lightbox + live search bar |
+| Services | `services.html` | Accordion-style expandable list of CoffeeBox services |
+| Enquiry | `enquiry.html` | Form with validation and dynamic success/error feedback |
+| Contact | `contact.html` | Google Map embed, contact form, live validation |
+| SEO Files | `robots.txt`, `sitemap.xml` | Enable search engine indexing |
+| Scripts | `js/script.js` | Handles all JavaScript features and interactivity |
+| Styles | `css/styles.css` | Controls layout, colors, typography, and responsive design |
+
+---
+
+## 🧠 Technologies Used
+- **HTML5** for semantic structure  
+- **CSS3** for modern responsive layout  
+- **JavaScript (ES6)** for interactivity  
+- **GitHub Pages** for hosting and deployment  
+
+---
+
+## 🌐 UX & UI Design Principles
+Based on top design literature:
+- *Don Norman – The Design of Everyday Things*  
+- *Steve Krug – Don’t Make Me Think*  
+- *Alan Cooper – About Face*  
+- *Jenifer Tidwell – Designing Interfaces*  
+- *Jakob Nielsen – Usability Heuristics*  
+
+---
+
+## 🔍 SEO Implementation
+- Meta titles, descriptions, and keywords for every page  
+- Robots.txt and Sitemap.xml for crawlability  
+- Accessible alt text for all images  
+- Optimized filenames for search indexing  
+
+---
+
+## 📸 Visual Assets
+All images are royalty-free and sourced from:
+- [https://canva.com](https://canva.com)  
+
+
+---
+
+## 📈 Branch Workflow
+- **main** → Base project  
+- **part3-js-seo** → Final version (JavaScript, SEO, interactivity)
+
+---
+
+## ✅ How to View
+1. Visit the live site:  
+   [https://st10486654.github.io/WEDE5020-POE-ST10486654-publicRepo/](https://st10486654.github.io/WEDE5020-POE-ST10486654-publicRepo/)  
+2. Navigate through each page via the top navigation bar.  
+3. Test interactivity on Products, Services, Enquiry, and Contact pages.  
+
+---
+
+## 🏁 Final Notes
+This project demonstrates:
+- Clean code and semantic structure  
+- Modern UX/UI design principles  
+- Full SEO optimization  
+- JavaScript interactivity and validation  
+- Professional GitHub documentation and hosting  
+
+---
+© 2025 ST10486654 | CoffeeBox Project – WEDE5020 POE
+
+
 
 
 
