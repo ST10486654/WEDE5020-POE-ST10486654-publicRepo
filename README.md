@@ -207,7 +207,35 @@ This project demonstrates:
 - Modern UX/UI design principles  
 - Full SEO optimization  
 - JavaScript interactivity and validation  
-- Professional GitHub documentation and hosting  
+- Professional GitHub documentation and hosting
+
+-------------------------------------------------
+References – CoffeeBox Website Project
+Student: ST10486654
+Module: WEDE5020 – Web Development
+-------------------------------------------------
+
+Primary Design and Development References:
+1. Norman, D. A. (2013). *The Design of Everyday Things.* MIT Press.
+2. Krug, S. (2014). *Don’t Make Me Think, Revisited: A Common Sense Approach to Web Usability.* New Riders.
+3. Cooper, A., Reimann, R., Cronin, D. (2014). *About Face: The Essentials of Interaction Design.* Wiley.
+4. Tidwell, J. (2010). *Designing Interfaces.* O'Reilly Media.
+5. Nielsen, J. (1995). *10 Usability Heuristics for User Interface Design.* Nielsen Norman Group.
+
+Online Technical Resources:
+6. MDN Web Docs. (2025). *HTML, CSS, and JavaScript Documentation.* Mozilla Foundation. https://developer.mozilla.org/
+7. W3Schools. (2025). *Web Development Tutorials.* https://www.w3schools.com/
+8. Canva. (2025). *CanvaAI.* https://canva.com/
+
+
+Academic Acknowledgment:
+This project follows Clean Code and UX/UI principles from the above sources.
+All media used are royalty-free, with appropriate credit given to original platforms.
+
+-------------------------------------------------
+End of References
+-------------------------------------------------
+
 
 ---
 © 2025 ST10486654 | CoffeeBox Project – WEDE5020 POE
