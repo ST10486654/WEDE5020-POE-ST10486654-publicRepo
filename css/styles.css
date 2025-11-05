@@ -235,3 +235,15 @@ footer a {
     grid-template-columns: 1fr;
   }
 }
+
+.menu-preview img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+.menu-preview img:hover {
+  transform: scale(1.05);
+}
+
