@@ -1,237 +1,74 @@
-/* =======================================================
-   CoffeeBox Website (Part 2: CSS)
-   External Stylesheet for ALL pages
-   Colors: Black (#111), White (#fff), Yellow (#f6c518)
-   ======================================================= */
-
 /* ---------------------------
-   2.2 CSS Reset + Base Styles
-   --------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px; /* Base font size for rem units */
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Open Sans', Arial, sans-serif;
-  background-color: #111;   /* Brand black */
-  color: #fff;              /* White text */
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Anchor defaults */
-a {
-  color: #f6c518;
-  text-decoration: none;
-}
-a:hover, a:focus {
-  text-decoration: underline;
-}
-
-/* ---------------------------
-   2.3 Typography
-   --------------------------- */
-h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5em;
-  line-height: 1.3;
-}
-
-h1 { font-size: 2.5rem; font-weight: 700; }
-h2 { font-size: 1.8rem; font-weight: 600; }
-h3 { font-size: 1.4rem; font-weight: 600; }
-
-p, li {
-  font-size: 1rem;
-  margin-bottom: 0.8em;
-}
-
-/* ---------------------------
-   2.4 Layout: Header & Nav
-   --------------------------- */
-header {
-  background-color: #000;
-  border-bottom: 2px solid #f6c518;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #f6c518;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: #fff;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-/* ---------------------------
-   2.5 Visual Styles + Pseudo
-   --------------------------- */
-nav a:hover, nav a:focus {
-  background-color: #f6c518;
-  color: #111;
-}
-nav a.active {
-  background-color: #fff;
-  color: #111;
-  font-weight: bold;
-}
-
-/* ---------------------------
-   Hero Section
-   --------------------------- */
-.hero {
-  background: url('../images/hero-coffee.jpg') center/cover no-repeat;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-.hero a {
-  background-color: #f6c518;
-  color: #111;
-  padding: 0.8rem 1.2rem;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-.hero a:hover {
-  background-color: #fff;
-}
-
-/* ---------------------------
-   Features Section (Grid)
-   --------------------------- */
-.features {
+  Product Grid & Cards
+--------------------------- */
+#products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 3rem 2rem;
-  background-color: #1a1a1a;
-}
-.features article {
-  background: #000;
-  border: 1px solid #333;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 1.25rem;
   padding: 1.5rem;
+}
+.product-card {
+  background: linear-gradient(180deg, #0f0f0f, #0b0b0b);
+  border: 1px solid #262626;
+  padding: 0.75rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
+  display:flex;
+  gap:0.75rem;
+  align-items: center;
 }
-.features article:hover {
-  transform: translateY(-5px);
-  border-color: #f6c518;
-}
-
-/* ---------------------------
-   Menu Preview
-   --------------------------- */
-.menu-preview {
-  padding: 2rem;
-  text-align: center;
-}
-.menu-preview ul {
-  list-style: none;
-}
-.menu-preview li {
-  margin-bottom: 0.5rem;
-}
-
-/* ---------------------------
-   Forms (Enquiry)
-   --------------------------- */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
-}
-input, textarea, button {
-  padding: 0.7rem;
-  border: 1px solid #333;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-button {
-  background-color: #f6c518;
-  color: #111;
-  font-weight: bold;
+.product-thumb {
+  border: none;
+  background: transparent;
+  padding: 0;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
-button:hover {
-  background-color: #fff;
-}
+.product-thumb img { width: 120px; height: 80px; object-fit: cover; border-radius:6px; display:block; }
+.product-info h3 { margin: 0; font-size: 1.05rem; }
+.product-info .price { color:#f6c518; margin: 0.4rem 0; font-weight:600; }
+.btn.small { padding: 0.4rem 0.6rem; font-size:0.9rem; border-radius:6px; }
 
 /* ---------------------------
-   Footer
-   --------------------------- */
-footer {
-  background-color: #000;
-  color: #aaa;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
+  Lightbox Modal
+--------------------------- */
+.lightbox {
+  position: fixed; inset:0; display:flex; align-items:center; justify-content:center;
+  background: rgba(0,0,0,0.75); opacity:0; pointer-events:none; transition:opacity .25s;
 }
-footer a {
-  color: #f6c518;
+.lightbox.open { opacity:1; pointer-events:auto; z-index:10000; }
+.lightbox-inner { max-width:900px; width:95%; max-height:90vh; background:#111; padding:1rem; border-radius:8px; box-shadow:0 10px 40px rgba(0,0,0,.6); position:relative; }
+.lb-img { width:100%; height:auto; display:block; border-radius:6px; margin-bottom:.5rem; }
+.lb-close{ position:absolute; top:8px; right:12px; background:transparent; border:none; color:#fff; font-size:28px; cursor:pointer; }
+.lb-controls { display:flex; justify-content:space-between; gap:1rem; margin-top:0.4rem; }
+.lb-controls button { background:#222; color:#fff; border:1px solid #333; padding:.4rem .8rem; border-radius:6px; cursor:pointer; }
+
+/* ---------------------------
+  Accordion (services)
+--------------------------- */
+.accordion { width:100%; max-width:900px; margin: 1rem auto; }
+.accordion-toggle { display:block; width:100%; text-align:left; padding: .8rem 1rem; background:#0b0b0b; color:#fff; border:1px solid #222; border-radius:6px; margin-bottom:.25rem; cursor:pointer; }
+.accordion-content { padding: .8rem 1rem; background:#141414; border-radius:6px; margin-bottom: .75rem; }
+
+/* ---------------------------
+  Forms: invalid + notes
+--------------------------- */
+input.invalid, textarea.invalid { outline: 2px solid #c0392b; }
+.field-note { color:#ffc9b3; font-size:.9rem; margin-top:.25rem; }
+
+/* ---------------------------
+  Small helpers
+--------------------------- */
+.flash {
+  position: fixed; right: 12px; bottom: 12px; background:#111; color:#fff; padding:.6rem 1rem; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,.5); transition:opacity .4s;
+  opacity: 0; z-index: 11000;
 }
 
-/* =======================================================
-   3. Responsive Design
-   ======================================================= */
+/* Add a11y focus outlines */
+a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(246,197,24,0.2); outline-offset:2px; }
 
-/* Tablet (≤ 900px) */
-@media (max-width: 900px) {
-  .features {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  nav ul {
-    gap: 1rem;
-  }
-}
+/* Make sure map container has height */
+#map { width:100%; height:300px; border-radius:8px; margin-top: .5rem; }
 
-/* Mobile (≤ 600px) */
-@media (max-width: 600px) {
-  header {
-    padding: 1rem;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .features {
-    grid-template-columns: 1fr;
-  }
+/* Responsive: ensure product thumb size on small screens */
+@media (max-width:600px) {
+  .product-thumb img { width:100px; height:70px; }
 }
