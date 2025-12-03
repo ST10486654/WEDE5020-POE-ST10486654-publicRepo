@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Products/Menu Page - CoffeeBox -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Products – CoffeeBox</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="CoffeeBox menu – signature coffees, cold drinks and snacks. Browse menu and enquire about catering." />
+  <meta name="keywords" content="Coffee, drive-thru, cappuccino, latte, iced mocha, muffins, Pietermaritzburg" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- HEADER -->
   <header>
     <div class="logo">CoffeeBox</div>
     <nav>
@@ -23,45 +23,24 @@
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main>
     <h1>Our Menu</h1>
 
-    <!-- Hot Beverages -->
-    <section>
-      <h2>Hot Beverages</h2>
-      <ul>
-        <li>Espresso – R20</li>
-        <li>Cappuccino – R30</li>
-        <li>Latte – R35</li>
-        <li>Americano – R25</li>
-      </ul>
+    <section class="menu-controls" style="padding:1rem;">
+      <label for="product-search" style="display:block;margin-bottom:.5rem;">Search menu</label>
+      <input id="product-search" type="search" placeholder="Find espresso, muffin, smoothie..." aria-label="Search menu" style="max-width:420px;padding:.6rem;border-radius:6px;border:1px solid #333;">
     </section>
 
-    <!-- Cold Beverages -->
-    <section>
-      <h2>Cold Beverages</h2>
-      <ul>
-        <li>Iced Mocha – R40</li>
-        <li>Iced Latte – R38</li>
-        <li>Smoothies – R42</li>
-      </ul>
+    <section id="products-grid" aria-live="polite" aria-label="Product list">
+      <!-- JS will inject product cards here -->
     </section>
 
-    <!-- Snacks -->
-    <section>
-      <h2>Snacks</h2>
-      <ul>
-        <li>Muffins – R18</li>
-        <li>Sandwiches – R28</li>
-        <li>Cookies – R15</li>
-      </ul>
-    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 CoffeeBox</p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
