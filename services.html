@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Services Page - CoffeeBox -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Services – CoffeeBox</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="CoffeeBox services: drive-thru, catering, community events and promotions." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- HEADER -->
   <header>
     <div class="logo">CoffeeBox</div>
     <nav>
@@ -23,21 +22,37 @@
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main>
     <h1>Our Services</h1>
-    <!-- Bullet list for clarity -->
-    <ul>
-      <li>Drive-thru coffee and meals for commuters</li>
-      <li>Catering for small events and functions</li>
-      <li>Special discounts for students and professionals</li>
-      <li>Community sponsorship and local partnerships</li>
-    </ul>
+
+    <div class="accordion" role="region" aria-label="Services list">
+      <button class="accordion-toggle" aria-expanded="false">Drive-thru & Takeaway</button>
+      <div class="accordion-content" hidden>
+        <p>Fast, contactless drive-thru service for commuters. Order at the window and go. Special morning combos available.</p>
+      </div>
+
+      <button class="accordion-toggle" aria-expanded="false">Catering for Events</button>
+      <div class="accordion-content" hidden>
+        <p>We provide coffee service for small events, office meetings and community functions. Contact us for package pricing.</p>
+      </div>
+
+      <button class="accordion-toggle" aria-expanded="false">Community Partnerships</button>
+      <div class="accordion-content" hidden>
+        <p>Student discounts, sponsorships and local event participation. We work with schools and charities to support the community.</p>
+      </div>
+
+      <button class="accordion-toggle" aria-expanded="false">Promotions & Loyalty</button>
+      <div class="accordion-content" hidden>
+        <p>Seasonal promotions and loyalty cards for regular customers. Sign up via the enquiry form to receive offers.</p>
+      </div>
+    </div>
+
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 CoffeeBox</p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
