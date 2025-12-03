@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Contact Page - CoffeeBox -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Contact page: map + contact form; uses Leaflet for map -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact – CoffeeBox</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Contact CoffeeBox. Find our location and send us a message." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Leaflet CSS for interactive map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">CoffeeBox</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- MAIN -->
-  <main>
-    <h1>Contact Us</h1>
-    <!-- Basic contact details -->
-    <p><strong>Address:</strong> CoffeeBox Drive-Thru, Athlone Circle, Pietermaritzburg</p>
-    <p><strong>Phone:</strong> +27 33 123 4567</p>
-    <p><strong>Email:</strong> info@coffeeboxsa.co.za</p>
-    <p><strong>Hours:</strong> Mon–Sat: 6am–8pm, Sun: 7am–6pm</p>
+<header>
+  <div class="logo">CoffeeBox</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Google Maps Embed (public embed, no JS needed) -->
-    <h2>Find Us</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.665515201643!2d30.3969!3d-29.6033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6f2e40f1e4f1d%3A0xd59c8c7c86e8a90!2sCoffeeBox%20Athlone%20Circle!5e0!3m2!1sen!2sza!4v1696012345678"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </main>
+<main>
+  <h1>Contact Us</h1>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 CoffeeBox</p>
-  </footer>
+  <p><strong>Address:</strong> CoffeeBox Drive-Thru, Athlone Circle, Pietermaritzburg</p>
+  <p><strong>Phone:</strong> +27 33 123 4567</p>
+  <p><strong>Email:</strong> info@coffeeboxsa.co.za</p>
+
+  <h2>Find Us</h2>
+  <!-- Map container; script will initialise Leaflet here -->
+  <div id="map" aria-label="Map showing CoffeeBox location"></div>
+
+  <h2>Contact Form</h2>
+  <form id="contact-form" aria-label="Contact form">
+    <label for="contact-name">Full Name*</label>
+    <input id="contact-name" name="name" type="text" required>
+
+    <label for="contact-email">Email Address*</label>
+    <input id="contact-email" name="email" type="email" required>
+
+    <label for="contact-subject">Subject</label>
+    <input id="contact-subject" name="subject" type="text">
+
+    <label for="contact-message">Message*</label>
+    <textarea id="contact-message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 CoffeeBox</p>
+</footer>
+
+<!-- Leaflet JS (map library) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
