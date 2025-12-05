@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://st10486654.github.io/WEDE5020-POE-ST10486654-publicRepo/sitemap.xml
