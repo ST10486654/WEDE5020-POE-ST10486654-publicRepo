@@ -4,11 +4,13 @@
   <!-- About Page - CoffeeBox -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us – CoffeeBox</title>
+  <title>About Us – CoffeeBox | Our Story</title>
+  <meta name="description" content="CoffeeBox started from Coffeeberry, building Pietermaritzburg’s first drive-thru coffee at Athlone Circle. Learn about our mission and values.">
+  <meta name="keywords" content="CoffeeBox about, CoffeeBox history, drive-thru coffee Pietermaritzburg">
   <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-  <!-- HEADER -->
   <header>
     <div class="logo">CoffeeBox</div>
     <nav>
@@ -23,16 +25,13 @@
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main>
-    <!-- Organisation Overview -->
     <section>
       <h1>About CoffeeBox</h1>
       <p>CoffeeBox grew from the Coffeeberry brand at Cascades Mall and pioneered KwaZulu-Natal’s first drive-thru coffee shop at Athlone Circle.</p>
       <p>We are a family-run business, integrated into the Pietermaritzburg community, combining convenience with quality.</p>
     </section>
 
-    <!-- Mission & Vision -->
     <section>
       <h2>Our Mission</h2>
       <p>Deliver premium coffee and food quickly, while supporting community development.</p>
@@ -42,9 +41,16 @@
       <h2>Our Vision</h2>
       <p>To become South Africa’s most iconic drive-through coffee brand, rooted in quality and social responsibility.</p>
     </section>
+
+    <!-- Testimonials (this is dynamically filled by script.js to show DOM manipulation) -->
+    <section aria-label="Customer testimonials">
+      <h2>What Customers Say</h2>
+      <div id="testimonials" class="testimonials">
+        <!-- JS will insert sample testimonials (this keeps the original content safe) -->
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 CoffeeBox</p>
   </footer>
