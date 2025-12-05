@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Contact page: map + contact form; uses Leaflet for map -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact – CoffeeBox</title>
-  <meta name="description" content="Contact CoffeeBox. Find our location and send us a message." />
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- Leaflet CSS for interactive map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Contact Page - CoffeeBox -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – CoffeeBox | Find Us</title>
+  <meta name="description" content="Contact CoffeeBox at Athlone Circle. Phone, email, opening hours, and interactive map.">
+  <meta name="keywords" content="CoffeeBox contact, CoffeeBox location, Athlone Circle">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Leaflet CSS (for interactive map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2k52S4+2K+QkC9YqE6Qx0E6gK7p2YqZk2g0v0Qg=" crossorigin=""/>
+  <script defer src="js/script.js"></script>
 </head>
 <body>
+  <header>
+    <div class="logo">CoffeeBox</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">CoffeeBox</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="enquiry.html">Enquiry</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <h1>Contact Us</h1>
+    <p><strong>Address:</strong> CoffeeBox Drive-Thru, Athlone Circle, Pietermaritzburg</p>
+    <p><strong>Phone:</strong> <a href="tel:+27331234567">+27 33 123 4567</a></p>
+    <p><strong>Email:</strong> <a href="mailto:info@coffeeboxsa.co.za">info@coffeeboxsa.co.za</a></p>
+    <p><strong>Hours:</strong> Mon–Sat: 6am–8pm, Sun: 7am–6pm</p>
 
-<main>
-  <h1>Contact Us</h1>
+    <h2>Find Us (Google Maps)</h2>
+    <!-- Google Maps Embed (kept since it was working) -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.665515201643!2d30.3969!3d-29.6033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6f2e40f1e4f1d%3A0xd59c8c7c86e8a90!2sCoffeeBox%20Athlone%20Circle!5e0!3m2!1sen!2sza!4v1696012345678"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-  <p><strong>Address:</strong> CoffeeBox Drive-Thru, Athlone Circle, Pietermaritzburg</p>
-  <p><strong>Phone:</strong> +27 33 123 4567</p>
-  <p><strong>Email:</strong> info@coffeeboxsa.co.za</p>
+    <h2>Interactive Map</h2>
+    <div id="leaflet-map" style="height: 300px;"></div>
 
-  <h2>Find Us</h2>
-  <!-- Map container; script will initialise Leaflet here -->
-  <div id="map" aria-label="Map showing CoffeeBox location"></div>
+    <h2>Send us a message</h2>
+    <form id="contact-form" action="#" novalidate>
+      <label for="c-name">Name</label>
+      <input id="c-name" name="name" type="text" required>
 
-  <h2>Contact Form</h2>
-  <form id="contact-form" aria-label="Contact form">
-    <label for="contact-name">Full Name*</label>
-    <input id="contact-name" name="name" type="text" required>
+      <label for="c-email">Email</label>
+      <input id="c-email" name="email" type="email" required>
 
-    <label for="contact-email">Email Address*</label>
-    <input id="contact-email" name="email" type="email" required>
+      <label for="c-type">Message Type</label>
+      <select id="c-type" name="type" required>
+        <option value="">Select...</option>
+        <option value="general">General</option>
+        <option value="feedback">Feedback</option>
+        <option value="complaint">Complaint</option>
+      </select>
 
-    <label for="contact-subject">Subject</label>
-    <input id="contact-subject" name="subject" type="text">
+      <label for="c-message">Message</label>
+      <textarea id="c-message" name="message" rows="5" required></textarea>
 
-    <label for="contact-message">Message*</label>
-    <textarea id="contact-message" name="message" rows="5" required></textarea>
+      <button id="c-send" type="submit">Send Email</button>
+    </form>
 
-    <button type="submit">Send Message</button>
-  </form>
-</main>
+    <div id="contact-response" class="form-response" aria-live="polite"></div>
+  </main>
 
-<footer>
-  <p>© 2025 CoffeeBox</p>
-</footer>
+  <footer>
+    <p>© 2025 CoffeeBox</p>
+  </footer>
 
-<!-- Leaflet JS (map library) -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="js/script.js"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-..." crossorigin=""></script>
 </body>
 </html>
