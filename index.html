@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Home page: hero, introduction, key links -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home – CoffeeBox</title>
-  <meta name="description" content="Welcome to CoffeeBox. Premium drive-thru coffee, snacks and community partnerships." />
-  <link rel="stylesheet" href="css/styles.css" />
+  <!-- index.html (CoffeeBox Website - Part 3) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoffeeBox – Home | Drive-thru Coffee Pietermaritzburg</title>
+  <meta name="description" content="CoffeeBox - Pietermaritzburg's drive-thru coffee. Fresh beans, fast service, community-focused. View our menu, order ahead, and find us at Athlone Circle.">
+  <meta name="keywords" content="CoffeeBox, drive-thru coffee, Pietermaritzburg, coffee, latte, cappuccino, Athlone Circle">
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="CoffeeBox – Drive-thru Coffee Pietermaritzburg">
+  <meta property="og:description" content="Quick, premium coffee from CoffeeBox. Drive-thru at Athlone Circle. Menu, contact, and more.">
+  <meta property="og:image" content="images/hero-coffee.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo">CoffeeBox</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">CoffeeBox</div>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="enquiry.html">Enquiry</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-
-  <!-- Hero header section -->
-  <section class="hero" style="padding:3rem 1rem;text-align:center;">
-    <h1>Welcome to CoffeeBox</h1>
-    <p>Your local drive-thru coffee spot at Athlone Circle — fresh, fast and friendly.</p>
-    <a href="products.html" class="btn">Browse Our Menu</a>
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero" aria-label="CoffeeBox hero">
+    <div class="hero-inner">
+      <h1>Fuel Your Day with CoffeeBox</h1>
+      <p>Quick, premium coffee – Pietermaritzburg’s first drive-thru coffee shop.</p>
+      <a class="cta" href="products.html">View Our Menu</a>
+    </div>
   </section>
 
-  <!-- Highlights -->
-  <section style="padding:2rem 1rem;">
-    <h2>Why CoffeeBox?</h2>
-    <p>We serve premium coffee and refreshments, while partnering with colleges, local talent and community initiatives.</p>
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <section class="features" aria-label="Why CoffeeBox">
+      <article>
+        <h2>Freshly Brewed</h2>
+        <p>Made with premium beans, roasted daily for bold taste and aroma.</p>
+      </article>
 
-    <ul style="list-style:none;padding:0;margin-top:1rem;">
-      <li>✔ Fast drive-thru service</li>
-      <li>✔ Barista-crafted drinks</li>
-      <li>✔ Fresh pastries and snacks</li>
-      <li>✔ Student-friendly specials</li>
-      <li>✔ Community and charity partnerships</li>
-    </ul>
-  </section>
+      <article>
+        <h2>Fast Service</h2>
+        <p>Drive-thru efficiency means you never leave your car — perfect for commuters.</p>
+      </article>
 
-</main>
+      <article>
+        <h2>Community First</h2>
+        <p>We proudly support local schools and events around Pietermaritzburg.</p>
+      </article>
+    </section>
 
-<footer>
-  <p>© 2025 CoffeeBox</p>
-</footer>
+    <!-- Menu preview: dynamically rendered by script.js using products data -->
+    <section class="menu-preview" aria-label="Signature Coffees">
+      <h2>Signature Coffees</h2>
+      <div id="menu-preview-list" class="product-cards" aria-live="polite">
+        <!-- JS will insert product cards here -->
+      </div>
+      <div class="menu-preview-actions">
+        <a href="products.html">See Full Menu</a>
+      </div>
+    </section>
+  </main>
 
-<script src="js/script.js"></script>
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2025 CoffeeBox |
+      <a href="https://instagram.com/coffeeboxsa" target="_blank" rel="noopener">Instagram</a> |
+      <a href="https://facebook.com/coffeeboxpmb" target="_blank" rel="noopener">Facebook</a>
+    </p>
+  </footer>
 </body>
 </html>
