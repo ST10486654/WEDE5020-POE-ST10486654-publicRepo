@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Enquiry page: form for product/catering/volunteer enquiries -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Enquiry – CoffeeBox</title>
-  <meta name="description" content="Send an enquiry to CoffeeBox about services, products or events." />
-  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Enquiry Page - CoffeeBox -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry – CoffeeBox | Get a Quote</title>
+  <meta name="description" content="Send an enquiry about services, volunteering or sponsorships at CoffeeBox. Request pricing and availability.">
+  <meta name="keywords" content="CoffeeBox enquiry, sponsorship, volunteering, catering quote">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
+  <header>
+    <div class="logo">CoffeeBox</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html" class="active">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">CoffeeBox</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="enquiry.html" class="active">Enquiry</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <h1>Enquiry Form</h1>
+    <form id="enquiry-form" action="#" novalidate>
+      <label for="e-name">Full Name</label>
+      <input id="e-name" name="name" type="text" required>
 
-<main>
-  <h1>Enquiry Form</h1>
+      <label for="e-email">Email Address</label>
+      <input id="e-email" name="email" type="email" required>
 
-  <!-- Enquiry form: client-side validation handled in script.js -->
-  <form id="enquiry-form" aria-label="Enquiry form">
-    <label for="enquiry-name">Full Name*</label>
-    <input id="enquiry-name" name="name" type="text" required>
+      <label for="e-type">Enquiry Type</label>
+      <select id="e-type" name="type" required>
+        <option value="">Select...</option>
+        <option value="product">Product availability</option>
+        <option value="catering">Catering / Event</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="sponsor">Sponsorship</option>
+      </select>
 
-    <label for="enquiry-email">Email Address*</label>
-    <input id="enquiry-email" name="email" type="email" required>
+      <label for="e-people">Number of people (if catering)</label>
+      <input id="e-people" name="people" type="number" min="1" placeholder="e.g., 20">
 
-    <label for="enquiry-type">I am enquiring about</label>
-    <select id="enquiry-type" name="type">
-      <option value="product">A product</option>
-      <option value="catering">Catering / event</option>
-      <option value="volunteer">Volunteering / sponsorship</option>
-      <option value="other">Other</option>
-    </select>
+      <label for="e-message">Message</label>
+      <textarea id="e-message" name="message" rows="5" placeholder="Tell us more..."></textarea>
 
-    <label for="enquiry-message">Your Message*</label>
-    <textarea id="enquiry-message" name="message" rows="5" required></textarea>
+      <button id="e-submit" type="submit">Submit Enquiry</button>
+    </form>
 
-    <button type="submit">Submit Enquiry</button>
-  </form>
-</main>
+    <!-- Enquiry response area (filled by JS) -->
+    <div id="enquiry-response" aria-live="polite" class="form-response"></div>
+  </main>
 
-<footer>
-  <p>© 2025 CoffeeBox</p>
-</footer>
-
-<script src="js/script.js"></script>
+  <footer>
+    <p>© 2025 CoffeeBox</p>
+  </footer>
 </body>
 </html>
