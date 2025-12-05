@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services – CoffeeBox</title>
-  <meta name="description" content="CoffeeBox services: drive-thru, catering, community events and promotions." />
-  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Services Page - CoffeeBox -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services – CoffeeBox | Catering & Drive-thru</title>
+  <meta name="description" content="CoffeeBox services: drive-thru coffees, catering for events, student discounts and community sponsorship.">
+  <meta name="keywords" content="CoffeeBox services, catering, drive-thru, discounts">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <div class="logo">CoffeeBox</div>
     <nav>
@@ -22,37 +26,37 @@
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main>
     <h1>Our Services</h1>
 
-    <div class="accordion" role="region" aria-label="Services list">
-      <button class="accordion-toggle" aria-expanded="false">Drive-thru & Takeaway</button>
-      <div class="accordion-content" hidden>
-        <p>Fast, contactless drive-thru service for commuters. Order at the window and go. Special morning combos available.</p>
+    <!-- Accessible accordion -->
+    <div class="accordion" id="services-accordion">
+      <button class="accordion-trigger" aria-expanded="false" aria-controls="acc1" id="acc1-btn">Drive-thru coffee and meals for commuters</button>
+      <div id="acc1" class="accordion-panel" role="region" aria-labelledby="acc1-btn">
+        <p>Fast, contactless service—perfect for commuters. Menu items are ready for pick up within minutes.</p>
       </div>
 
-      <button class="accordion-toggle" aria-expanded="false">Catering for Events</button>
-      <div class="accordion-content" hidden>
-        <p>We provide coffee service for small events, office meetings and community functions. Contact us for package pricing.</p>
+      <button class="accordion-trigger" aria-expanded="false" aria-controls="acc2" id="acc2-btn">Catering for small events and functions</button>
+      <div id="acc2" class="accordion-panel" role="region" aria-labelledby="acc2-btn">
+        <p>Small event catering packages available—coffee, snacks, and barista service on request.</p>
       </div>
 
-      <button class="accordion-toggle" aria-expanded="false">Community Partnerships</button>
-      <div class="accordion-content" hidden>
-        <p>Student discounts, sponsorships and local event participation. We work with schools and charities to support the community.</p>
+      <button class="accordion-trigger" aria-expanded="false" aria-controls="acc3" id="acc3-btn">Student and professional discounts</button>
+      <div id="acc3" class="accordion-panel" role="region" aria-labelledby="acc3-btn">
+        <p>Show a valid student or professional ID to get a discount during promotional hours.</p>
       </div>
 
-      <button class="accordion-toggle" aria-expanded="false">Promotions & Loyalty</button>
-      <div class="accordion-content" hidden>
-        <p>Seasonal promotions and loyalty cards for regular customers. Sign up via the enquiry form to receive offers.</p>
+      <button class="accordion-trigger" aria-expanded="false" aria-controls="acc4" id="acc4-btn">Community sponsorship and partnerships</button>
+      <div id="acc4" class="accordion-panel" role="region" aria-labelledby="acc4-btn">
+        <p>We partner with local schools and charities to sponsor events and community initiatives.</p>
       </div>
     </div>
-
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 CoffeeBox</p>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
