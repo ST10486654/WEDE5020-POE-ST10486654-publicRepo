@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Products – CoffeeBox</title>
-  <meta name="description" content="CoffeeBox menu – signature coffees, cold drinks and snacks. Browse menu and enquire about catering." />
-  <meta name="keywords" content="Coffee, drive-thru, cappuccino, latte, iced mocha, muffins, Pietermaritzburg" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Products/Menu Page - CoffeeBox (Part 3) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products – CoffeeBox | Menu & Gallery</title>
+  <meta name="description" content="CoffeeBox menu: hot coffees, cold drinks and snacks. Browse images, filter and view larger images in the gallery.">
+  <meta name="keywords" content="CoffeeBox menu, coffee menu, drive-thru menu, espresso, latte, muffins">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header>
@@ -26,21 +28,39 @@
   <main>
     <h1>Our Menu</h1>
 
-    <section class="menu-controls" style="padding:1rem;">
-      <label for="product-search" style="display:block;margin-bottom:.5rem;">Search menu</label>
-      <input id="product-search" type="search" placeholder="Find espresso, muffin, smoothie..." aria-label="Search menu" style="max-width:420px;padding:.6rem;border-radius:6px;border:1px solid #333;">
+    <!-- Search & Filters -->
+    <div class="search-bar">
+      <label for="product-search" class="visually-hidden">Search products</label>
+      <input id="product-search" type="search" placeholder="Search menu (e.g., latte, muffin)" aria-label="Search menu">
+      <select id="product-filter" aria-label="Filter by category">
+        <option value="all">All</option>
+        <option value="hot">Hot</option>
+        <option value="cold">Cold</option>
+        <option value="snack">Snacks</option>
+      </select>
+    </div>
+
+    <!-- Products container (populated by JS) -->
+    <section id="products-list" class="product-cards" aria-live="polite">
+      <!-- JS inserts cards here -->
     </section>
 
-    <section id="products-grid" aria-live="polite" aria-label="Product list">
-      <!-- JS will inject product cards here -->
-    </section>
+    <!-- Lightbox modal (hidden) -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true" aria-labelledby="lightbox-title">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Close image"></button>
+      <div class="lightbox-content">
+        <h2 id="lightbox-title" class="visually-hidden">Product image</h2>
+        <img id="lightbox-image" src="" alt="">
+        <p id="lightbox-caption"></p>
+      </div>
+      <button id="lightbox-prev" class="lightbox-nav" aria-label="Previous image"></button>
+      <button id="lightbox-next" class="lightbox-nav" aria-label="Next image"></button>
+    </div>
 
   </main>
 
   <footer>
     <p>© 2025 CoffeeBox</p>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
