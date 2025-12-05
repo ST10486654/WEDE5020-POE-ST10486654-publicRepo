@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- About Page - CoffeeBox -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us – CoffeeBox | Our Story</title>
-  <meta name="description" content="CoffeeBox started from Coffeeberry, building Pietermaritzburg’s first drive-thru coffee at Athlone Circle. Learn about our mission and values.">
-  <meta name="keywords" content="CoffeeBox about, CoffeeBox history, drive-thru coffee Pietermaritzburg">
+  <!-- About Page - CoffeeBox (Upgraded for Part 3) -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>About CoffeeBox | Drive-thru Coffee — Pietermaritzburg</title>
+  <meta name="description" content="CoffeeBox — Pietermaritzburg's drive-thru coffee. Our story from Coffeeberry to the Athlone Circle drive-thru. Meet the team, our mission and values.">
+  <meta name="keywords" content="CoffeeBox, Coffeeberry, drive-thru coffee, Pietermaritzburg, Athlone Circle, baristas">
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/script.js"></script>
+
+  <!-- Organization structured data for SEO (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "CoffeeBox",
+    "url": "https://st10486654.github.io/WEDE5020-POE-ST10486654-publicRepo/",
+    "logo": "https://st10486654.github.io/WEDE5020-POE-ST10486654-publicRepo/images/hero-coffee.jpg",
+    "sameAs": [
+      "https://instagram.com/coffeeboxsa",
+      "https://facebook.com/coffeeboxpmb"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Athlone Circle",
+      "addressLocality": "Pietermaritzburg",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27 33 123 4567",
+    "description": "CoffeeBox is Pietermaritzburg's first drive-thru coffee shop delivering premium coffee quickly with a focus on community."
+  }
+  </script>
 </head>
 <body>
+  <!-- Header (kept same) -->
   <header>
     <div class="logo">CoffeeBox</div>
     <nav>
@@ -25,32 +50,97 @@
     </nav>
   </header>
 
+  <!-- Page hero (keeps brand look) -->
   <main>
-    <section>
-      <h1>About CoffeeBox</h1>
-      <p>CoffeeBox grew from the Coffeeberry brand at Cascades Mall and pioneered KwaZulu-Natal’s first drive-thru coffee shop at Athlone Circle.</p>
-      <p>We are a family-run business, integrated into the Pietermaritzburg community, combining convenience with quality.</p>
-    </section>
-
-    <section>
-      <h2>Our Mission</h2>
-      <p>Deliver premium coffee and food quickly, while supporting community development.</p>
-    </section>
-
-    <section>
-      <h2>Our Vision</h2>
-      <p>To become South Africa’s most iconic drive-through coffee brand, rooted in quality and social responsibility.</p>
-    </section>
-
-    <!-- Testimonials (this is dynamically filled by script.js to show DOM manipulation) -->
-    <section aria-label="Customer testimonials">
-      <h2>What Customers Say</h2>
-      <div id="testimonials" class="testimonials">
-        <!-- JS will insert sample testimonials (this keeps the original content safe) -->
+    <section class="about-hero" aria-label="About CoffeeBox hero">
+      <div class="about-hero-inner">
+        <h1>About CoffeeBox</h1>
+        <p class="lede">Born from Coffeeberry, CoffeeBox pioneered KwaZulu-Natal’s first drive-thru coffee at Athlone Circle — premium coffee, fast service, and community at the heart of everything.</p>
+        <p><a class="btn" href="products.html">Try our signature coffees</a></p>
       </div>
+    </section>
+
+    <!-- Story + Mission -->
+    <section class="about-grid" aria-labelledby="story-heading">
+      <div class="about-text">
+        <h2 id="story-heading">Our Story</h2>
+        <p>What began as Coffeeberry at Cascades Mall grew into a new idea: quality coffee for people on the move. CoffeeBox was created for busy commuters and local families alike — a place where speed and craftsmanship meet.</p>
+
+        <h3>Mission</h3>
+        <p>Deliver premium, freshly brewed coffee quickly while supporting Pietermaritzburg’s community through partnerships and responsible practices.</p>
+
+        <h3>Vision</h3>
+        <p>To become South Africa’s most loved drive-thru coffee brand — known for consistent quality and friendly service.</p>
+
+        <h3>Values</h3>
+        <ul class="value-list">
+          <li><strong>Quality</strong> — premium beans, roasted for consistency.</li>
+          <li><strong>Speed</strong> — drive-thru efficiency without sacrificing flavour.</li>
+          <li><strong>Community</strong> — local partnerships and sponsorships.</li>
+          <li><strong>Care</strong> — trained baristas and excellent customer service.</li>
+        </ul>
+
+        <p class="small-note">Want to partner with CoffeeBox or request catering? <a href="enquiry.html">Send an enquiry</a>.</p>
+      </div>
+
+      <!-- Right column: Team image + cards -->
+      <aside class="about-media" aria-label="Meet the team and milestones">
+        <figure>
+          <img src="images/team-baristas.jpg" alt="CoffeeBox baristas preparing drinks" loading="lazy">
+          <figcaption>Our baristas at CoffeeBox — trained in craft and service.</figcaption>
+        </figure>
+
+        <div class="team-cards" role="list" aria-label="Key team members">
+          <div class="team-card" role="listitem">
+            <img src="images/latte.jpg" alt="Head barista smiling" loading="lazy">
+            <div class="team-info">
+              <strong>Mandla — Head Barista</strong>
+              <p>5+ years training and a love for perfect crema.</p>
+            </div>
+          </div>
+
+          <div class="team-card" role="listitem">
+            <img src="images/muffin.jpg" alt="Assistant barista preparing muffins" loading="lazy">
+            <div class="team-info">
+              <strong>Aisha — Shift Manager</strong>
+              <p>Focuses on speed, quality and staff coaching.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestones -->
+        <div class="milestones">
+          <h4>Milestones</h4>
+          <ul>
+            <li>2018 — Coffeeberry opened at Cascades Mall</li>
+            <li>2021 — CoffeeBox drive-thru launched at Athlone Circle</li>
+            <li>2024 — Community sponsorship program started</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Testimonials (dynamically populated by js/script.js) -->
+    <section id="testimonials-section" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading">What Customers Say</h2>
+      <div id="testimonials" class="testimonials" aria-live="polite">
+        <!-- JS injects testimonials here; graceful fallback text below -->
+        <noscript>
+          <p>We love our customers! Visit our products and contact pages to find out more.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- Local presence / CTA -->
+    <section class="about-local" aria-label="Visit CoffeeBox">
+      <h2>Visit CoffeeBox</h2>
+      <p><strong>Address:</strong> CoffeeBox Drive-Thru, Athlone Circle, Pietermaritzburg</p>
+      <p><strong>Hours:</strong> Mon–Sat: 6am–8pm • Sun: 7am–6pm</p>
+      <p><a class="btn" href="contact.html">Get directions & contact us</a></p>
     </section>
   </main>
 
+  <!-- Footer (kept same) -->
   <footer>
     <p>© 2025 CoffeeBox</p>
   </footer>
