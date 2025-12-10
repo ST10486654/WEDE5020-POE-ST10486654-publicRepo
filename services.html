@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Services Page - CoffeeBox -->
+  <!-- 
+    SERVICES PAGE (Google-level upgrade)
+    - Purpose: Clearly communicate CoffeeBox services using scannable cards.
+    - Adds accessibility, SEO, and structured data for improved search visibility.
+  -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services – CoffeeBox | Catering & Drive-thru</title>
-  <meta name="description" content="CoffeeBox services: drive-thru coffees, catering for events, student discounts and community sponsorship.">
-  <meta name="keywords" content="CoffeeBox services, catering, drive-thru, discounts">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Services | CoffeeBox Drive-Thru Coffee Pietermaritzburg</title>
+  <meta name="description" content="Explore CoffeeBox services: drive-thru coffee, catering, office orders, early-morning pickups, and event support. Fast, friendly and community-focused.">
+
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/script.js"></script>
+
+  <!-- Structured data for services page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Drive-Thru Coffee Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "CoffeeBox",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Athlone Circle",
+        "addressLocality": "Pietermaritzburg"
+      }
+    },
+    "areaServed": "Pietermaritzburg, KwaZulu-Natal"
+  }
+  </script>
 </head>
+
 <body>
-  <!-- HEADER -->
+
+  <!-- ================= HEADER ================= -->
   <header>
     <div class="logo">CoffeeBox</div>
     <nav>
@@ -26,35 +52,97 @@
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main>
-    <h1>Our Services</h1>
 
-    <!-- Accessible accordion -->
-    <div class="accordion" id="services-accordion">
-      <button class="accordion-trigger" aria-expanded="false" aria-controls="acc1" id="acc1-btn">Drive-thru coffee and meals for commuters</button>
-      <div id="acc1" class="accordion-panel" role="region" aria-labelledby="acc1-btn">
-        <p>Fast, contactless service—perfect for commuters. Menu items are ready for pick up within minutes.</p>
-      </div>
+    <!-- ================= HERO SECTION =================
+         Purpose: Give users a short summary of why this page matters.
+    -->
+    <section class="services-hero">
+      <h1>Our Services</h1>
+      <p>CoffeeBox provides fast, reliable coffee solutions for busy mornings, events and workplaces across Pietermaritzburg.</p>
+    </section>
 
-      <button class="accordion-trigger" aria-expanded="false" aria-controls="acc2" id="acc2-btn">Catering for small events and functions</button>
-      <div id="acc2" class="accordion-panel" role="region" aria-labelledby="acc2-btn">
-        <p>Small event catering packages available—coffee, snacks, and barista service on request.</p>
-      </div>
+    <!-- ================= SERVICE CARDS =================
+         Purpose: Present 3–4 services in a scannable card format.
+         Interactivity: Each card contains an accordion section.
+    -->
+    <section class="services-grid">
 
-      <button class="accordion-trigger" aria-expanded="false" aria-controls="acc3" id="acc3-btn">Student and professional discounts</button>
-      <div id="acc3" class="accordion-panel" role="region" aria-labelledby="acc3-btn">
-        <p>Show a valid student or professional ID to get a discount during promotional hours.</p>
-      </div>
+      <!-- DRIVE-THRU SERVICE -->
+      <article class="service-card">
+        <img src="images/expresso.jpg" alt="Coffee drive-thru service">
+        <h2>Drive-Thru Service</h2>
+        <p class="service-summary">Premium coffee, ready fast.</p>
 
-      <button class="accordion-trigger" aria-expanded="false" aria-controls="acc4" id="acc4-btn">Community sponsorship and partnerships</button>
-      <div id="acc4" class="accordion-panel" role="region" aria-labelledby="acc4-btn">
-        <p>We partner with local schools and charities to sponsor events and community initiatives.</p>
-      </div>
-    </div>
+        <button class="accordion-toggle" aria-expanded="false">
+          Learn more
+        </button>
+
+        <div class="accordion-content" hidden>
+          <p>Our drive-thru lane delivers high-quality coffee for commuters and families. Perfect for early mornings, lunch breaks and quick refreshments throughout the day.</p>
+          <p><a href="products.html">View our menu →</a></p>
+        </div>
+      </article>
+
+      <!-- OFFICE COFFEE ORDERS -->
+      <article class="service-card">
+        <img src="images/latte.jpg" alt="Office coffee orders">
+        <h2>Office Coffee Orders</h2>
+        <p class="service-summary">Keep your team energized.</p>
+
+        <button class="accordion-toggle" aria-expanded="false">
+          Learn more
+        </button>
+
+        <div class="accordion-content" hidden>
+          <p>Place bulk office orders and collect them at a scheduled time. Ideal for teams needing a morning boost or mid-day productivity lift.</p>
+          <p><a href="enquiry.html">Send us an office enquiry →</a></p>
+        </div>
+      </article>
+
+      <!-- EVENT SUPPORT -->
+      <article class="service-card">
+        <img src="images/muffin.jpg" alt="Events and catering">
+        <h2>Events & Catering</h2>
+        <p class="service-summary">For special occasions.</p>
+
+        <button class="accordion-toggle" aria-expanded="false">
+          Learn more
+        </button>
+
+        <div class="accordion-content" hidden>
+          <p>We provide coffee boxes, pastries and beverage packages for small events, sports days, school gatherings and community functions.</p>
+          <p><a href="contact.html">Contact us for options →</a></p>
+        </div>
+      </article>
+
+      <!-- EARLY MORNING PICKUPS -->
+      <article class="service-card">
+        <img src="images/smoothie.jpg" alt="Early morning pickup service">
+        <h2>Early Morning Pickups</h2>
+        <p class="service-summary">Ready before sunrise.</p>
+
+        <button class="accordion-toggle" aria-expanded="false">
+          Learn more
+        </button>
+
+        <div class="accordion-content" hidden>
+          <p>Pre-order your favourite drinks the night before and collect them early — ideal for athletes, long-distance drivers and early workers.</p>
+          <p><a href="enquiry.html">Schedule your pickup →</a></p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ================= CTA SECTION ================= -->
+    <section class="services-cta">
+      <h2>Need something specific?</h2>
+      <p>We tailor orders for teams, groups and events.</p>
+      <a href="enquiry.html" class="btn">Send an enquiry</a>
+    </section>
+
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 CoffeeBox</p>
   </footer>
