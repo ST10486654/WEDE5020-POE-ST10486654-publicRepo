@@ -338,7 +338,21 @@ The CoffeeBox website now reflects:
 ✔ organised source code
 ✔ industry-level documentation
 
+SNAPSHOTS OF THE UPDATED SUPPLEMENTARY WEBSITE ASSIGNMENT
 
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_26_24" src="https://github.com/user-attachments/assets/844a9a32-2546-44d6-8f93-a4af7f00ea8f" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_26_13" src="https://github.com/user-attachments/assets/e87cfd4f-24ba-4bc3-8114-0c896e9e22a6" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_26_01" src="https://github.com/user-attachments/assets/c491908f-cdf3-45d1-b2fc-5df20a3fe959" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_25_44" src="https://github.com/user-attachments/assets/59c1cba5-a02f-4a33-9cea-b17b65d7630e" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_25_33" src="https://github.com/user-attachments/assets/8746b20c-cdcd-4553-abe2-5ff2d5d275ca" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_25_22" src="https://github.com/user-attachments/assets/30fc3e04-521c-4e77-b7e6-e59800438677" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_25_06" src="https://github.com/user-attachments/assets/806eb2f6-c152-4368-912d-f275454c00c2" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_24_55" src="https://github.com/user-attachments/assets/5a7e634e-6503-4cce-8443-bd1b9f60b51a" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_24_32" src="https://github.com/user-attachments/assets/8e0956f4-395a-4028-be80-2075a66dbcb8" />
+<img width="1366" height="768" alt="CoffeeBox – Home _ Drive-thru Coffee Pietermaritzburg - Google Chrome 10_12_2025 23_24_13" src="https://github.com/user-attachments/assets/bfd86440-af98-4389-a388-6069d25d3f88" />
+<img width="1366" height="728" alt="CoffeeBox – Home _ Drive-thru Coffee Pietermaritzburg - Google Chrome 10_12_2025 23_19_39" src="https://github.com/user-attachments/assets/4b6b14a7-3492-497c-8563-dfcabd5d6643" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_26_55" src="https://github.com/user-attachments/assets/1a515b7a-be2f-4fc2-9814-e3488d37bc0e" />
+<img width="1366" height="728" alt="About CoffeeBox _ Drive-thru Coffee — Pietermaritzburg - Google Chrome 10_12_2025 23_26_45" src="https://github.com/user-attachments/assets/7a44eec8-af20-410b-b4b5-6cacff24a416" />
 
 
 
