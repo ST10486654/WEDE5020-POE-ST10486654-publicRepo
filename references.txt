@@ -60,6 +60,107 @@ Address: CoffeeBox Athlone Circle, Pietermaritzburg.
     The Clean navigation bar with brand logo left, links right.
 
     Was inspired by: Starbucks (Global Coffee Leader)
+**************************************************************************************************************************************
+**************************************************************************************************************************************
+
+REFERENCES FOR COFFEEBOX WEBSITE PROJECT (PART 3 - SUPP)
+=======================================
+
+This project was developed using a combination of web development best-practices, academic design theory, and recognised industry standards. The following sources informed the structure, layout, accessibility, JavaScript logic, SEO improvements, and overall user-experience enhancements across the CoffeeBox website.
+
+---------------------------------------
+1. BOOKS (CORE DESIGN AND INTERACTION REFERENCES)
+---------------------------------------
+
+Ben Shneiderman, Catherine Plaisant, Maxine Cohen & Steven Jacobs. 
+“Designing the User Interface: Strategies for Effective Human-Computer Interaction.” 
+Pearson Education.
+
+Don Norman. 
+“The Design of Everyday Things.” 
+MIT Press.
+
+Helen Sharp, Yvonne Rogers & Jenny Preece. 
+“Interaction Design: Beyond Human-Computer Interaction.” 
+Wiley.
+
+Jeffrey Zeldman & Ethan Marcotte. 
+“Designing with Web Standards.” 
+New Riders Publishing.
+
+Jeff Johnson. 
+“Designing with the Mind in Mind: Simple Guide to Understanding User Interface Design Rules.” 
+Morgan Kaufmann.
+
+---------------------------------------
+2. WEB DEVELOPMENT & STANDARDS REFERENCES
+---------------------------------------
+
+Mozilla Developer Network (MDN Web Docs). 
+General HTML, CSS, JavaScript and accessibility guidelines.
+https://developer.mozilla.org/
+
+W3C – World Wide Web Consortium.  
+HTML5 Specification, CSS3 Standards, ARIA Accessibility Guidelines.
+https://www.w3.org/
+
+Google Developers.  
+Web Vitals, Lighthouse Recommendations, SEO Best Practices.
+https://developers.google.com/
+
+Schema.org Documentation.  
+Reference for JSON-LD structured data for Service, Organization, ContactPage and Café schema types.
+https://schema.org/
+
+---------------------------------------
+3. PROJECT-SPECIFIC IMPLEMENTATION REFERENCES
+---------------------------------------
+
+CoffeeBox Branding & Concept  
+All brand colours, theme decisions, text content, and menu structure were provided by the student (no external brand assets used or copied).
+
+Website Structure  
+Internal linking strategy, file structure (index.html, services.html, products.html, enquiry.html, contact.html, about.html, styles.css, script.js), and image choices were based on the developer’s original work, then refined using interaction-design and UX principles from the sources listed above.
+
+JavaScript Components  
+Accordion behaviour, aria-expanded toggling, open/closed business hours indicator, and testimonial rendering references MDN best-practice patterns.
+
+CSS Layout Techniques  
+Grid layout patterns (auto-fit, minmax), responsive card design, and mobile-first adjustments were created based on established CSS standards and tutorials documented in MDN and W3C.
+
+---------------------------------------
+4. SEO & ACCESSIBILITY REFERENCES
+---------------------------------------
+
+Google Search Essentials (formerly Webmaster Guidelines).  
+Title and meta-description recommendations, sitemap, robots.txt rules.
+
+WebAIM – Web Accessibility in Mind.  
+ARIA roles, keyboard accessibility, alt text, and colour-contrast guidance.
+https://webaim.org/
+
+A11Y Project.  
+Practical accessibility tips and markup patterns.
+https://www.a11yproject.com/
+
+---------------------------------------
+5. IMAGE REFERENCES
+---------------------------------------
+
+All image filenames referenced in the student project (hero-coffee.jpg, latte.jpg, muffin.jpg, smoothie.jpg, expresso.jpg, etc.) were provided locally by the student.  
+No copyrighted external images were downloaded or used.
+
+---------------------------------------
+6. TOOLS & PLATFORMS
+---------------------------------------
+
+GitHub – Version control and documentation hosting.
+GitHub Desktop – Commit management.
+Visual Studio Code – Code editing environment.
+
+---------------------------------------
+END OF REFERENCES
+=======================================
 
 
 
