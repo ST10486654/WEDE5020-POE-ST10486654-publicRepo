@@ -179,20 +179,33 @@ footer { background-color:#000; color:#aaa; text-align:center; padding:1rem; mar
 
    /* ---------- Contact Page Styles ---------- */
 
+ /* ---------- Block 1: Contact hero styles ----------
+   - Applies centered layout and spacing for the hero area.
+   - Matches brand typography and preserves hero visual hierarchy.
+*/  
+
 .contact-hero {
   text-align: center;
   padding: 2rem 1rem;
 }
 
+/* ---------- Block 2: Contact layout grid ----------
+   - Main container for the left (form) and right (info/map) columns.
+   - Uses CSS Grid for predictable two-column layout on wider screens.
+*/
 .contact-layout {
   max-width: 1100px;
   margin: 1rem auto;
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 350px; /* left column flexible, right column fixed-ish */
   gap: 2rem;
   padding: 0 1rem;
 }
 
+/* ---------- Block 3: Card panels for form & info ----------
+   - Adds background, border and padding to visually separate content.
+   - Uses existing muted border colors so theme is preserved.
+*/
 .contact-form, .contact-info {
   background: #0f0f0f;
   border: 1px solid var(--muted-2);
@@ -200,32 +213,61 @@ footer { background-color:#000; color:#aaa; text-align:center; padding:1rem; mar
   border-radius: 8px;
 }
 
+/* ---------- Block 4: Form label and feedback styling ----------
+   - Ensures labels are visible and spaced from inputs.
+   - Styles the feedback paragraph for accessible messages.
+*/
 .contact-form label {
   margin-top: 1rem;
   display: block;
   font-weight: 600;
 }
 
+
 .form-feedback {
   margin-top: 0.75rem;
   font-size: 0.9rem;
 }
 
+/* ---------- Block 5: Open/Closed indicator ----------
+   - Makes the live-open-status prominent and easy to read.
+   - JS controls text and optionally color class/inline color.
+*/
 .open-status {
   margin-top: 0.5rem;
   font-weight: bold;
 }
 
+/* ---------- Block 6: Map placeholder styling ----------
+   - Ensures the map or map image scales to fit the card nicely.
+   - Good for both static placeholder and if you later embed a map element.
+*/
 .map-box img {
   width: 100%;
   border-radius: 8px;
   margin: 1rem 0;
 }
 
+/* ---------- Block 7: Responsive adjustments ----------
+   - Ensures the layout collapses to a single column on small screens.
+   - Keeps the form above the info box (natural reading order).
+*/
 @media (max-width: 800px) {
   .contact-layout {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---------- Block 8: Focus styles for accessibility ----------
+   - Provides a visible focus ring for keyboard users.
+   - Does not alter colors otherwise (keeps brand palette).
+*/
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form button:focus,
+.contact-info a:focus {
+  outline: 3px solid rgba(246,197,24,0.18); /* subtle yellow focus ring */
+  outline-offset: 2px;
 }
 
    
