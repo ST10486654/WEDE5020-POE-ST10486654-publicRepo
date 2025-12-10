@@ -1,78 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Contact Page - CoffeeBox -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – CoffeeBox | Find Us</title>
-  <meta name="description" content="Contact CoffeeBox at Athlone Circle. Phone, email, opening hours, and interactive map.">
-  <meta name="keywords" content="CoffeeBox contact, CoffeeBox location, Athlone Circle">
+
+  <title>Contact CoffeeBox | Drive-Thru Coffee Pietermaritzburg</title>
+  <meta name="description" content="Contact CoffeeBox. Find our location at Athlone Circle, Pietermaritzburg. Send an enquiry, get directions, or reach us using the contact form.">
+
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Leaflet CSS (for interactive map) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2k52S4+2K+QkC9YqE6Qx0E6gK7p2YqZk2g0v0Qg=" crossorigin=""/>
   <script defer src="js/script.js"></script>
+
+  <!-- ContactPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "CoffeeBox Contact Page",
+    "description": "Contact CoffeeBox Drive-Thru Coffee at Athlone Circle, Pietermaritzburg.",
+    "url": "https://st10486654.github.io/WEDE5020-POE-ST10486654-publicRepo/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CoffeeBox",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Athlone Circle",
+        "addressLocality": "Pietermaritzburg",
+        "addressCountry": "ZA"
+      },
+      "telephone": "+27 33 123 4567"
+    }
+  }
+  </script>
 </head>
+
 <body>
-  <header>
-    <div class="logo">CoffeeBox</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <p><strong>Address:</strong> CoffeeBox Drive-Thru, Athlone Circle, Pietermaritzburg</p>
-    <p><strong>Phone:</strong> <a href="tel:+27331234567">+27 33 123 4567</a></p>
-    <p><strong>Email:</strong> <a href="mailto:info@coffeeboxsa.co.za">info@coffeeboxsa.co.za</a></p>
-    <p><strong>Hours:</strong> Mon–Sat: 6am–8pm, Sun: 7am–6pm</p>
+<header>
+  <div class="logo">CoffeeBox</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <h2>Find Us (Google Maps)</h2>
-    <!-- Google Maps Embed (kept since it was working) -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.665515201643!2d30.3969!3d-29.6033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6f2e40f1e4f1d%3A0xd59c8c7c86e8a90!2sCoffeeBox%20Athlone%20Circle!5e0!3m2!1sen!2sza!4v1696012345678"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<main>
 
-    <h2>Interactive Map</h2>
-    <div id="leaflet-map" style="height: 300px;"></div>
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <h1>Contact CoffeeBox</h1>
+    <p>We respond to all messages within 24 hours. Need help fast? We're here for you.</p>
+  </section>
 
-    <h2>Send us a message</h2>
-    <form id="contact-form" action="#" novalidate>
-      <label for="c-name">Name</label>
-      <input id="c-name" name="name" type="text" required>
+  <!-- Main Layout -->
+  <section class="contact-layout">
 
-      <label for="c-email">Email</label>
-      <input id="c-email" name="email" type="email" required>
+    <!-- LEFT: Contact Form -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
 
-      <label for="c-type">Message Type</label>
-      <select id="c-type" name="type" required>
-        <option value="">Select...</option>
-        <option value="general">General</option>
-        <option value="feedback">Feedback</option>
-        <option value="complaint">Complaint</option>
-      </select>
+      <form id="contactForm" novalidate>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter full name">
 
-      <label for="c-message">Message</label>
-      <textarea id="c-message" name="message" rows="5" required></textarea>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="example@gmail.com">
 
-      <button id="c-send" type="submit">Send Email</button>
-    </form>
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="How can we help?"></textarea>
 
-    <div id="contact-response" class="form-response" aria-live="polite"></div>
-  </main>
+        <button type="submit" class="btn">Send Message</button>
 
-  <footer>
-    <p>© 2025 CoffeeBox</p>
-  </footer>
+        <p id="contactFeedback" aria-live="polite" class="form-feedback"></p>
+      </form>
+    </div>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-..." crossorigin=""></script>
+    <!-- RIGHT: Info Section -->
+    <aside class="contact-info">
+      <h2>Our Location</h2>
+
+      <p><strong>Address:</strong><br>CoffeeBox Drive-Thru<br>Athlone Circle, Pietermaritzburg</p>
+
+      <p><strong>Phone:</strong> +27 33 123 4567</p>
+
+      <p id="openStatus" class="open-status">Checking store hours…</p>
+
+      <!-- Map Placeholder -->
+      <div class="map-box">
+        <img src="images/hero-coffee.jpg" alt="CoffeeBox location map placeholder">
+      </div>
+
+      <p>
+        <a href="https://www.google.com/maps?q=Athlone+Circle+Pietermaritzburg"
+           target="_blank" class="btn">Get Directions</a>
+      </p>
+
+    </aside>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 CoffeeBox</p>
+</footer>
+
 </body>
 </html>
