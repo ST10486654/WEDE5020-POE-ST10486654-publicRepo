@@ -416,5 +416,16 @@ function setOpenStatus() {
 
 setOpenStatus(); // run immediately (safe because the script is deferred)
 
+// ===== Services Page Accordion Logic =====
+document.querySelectorAll(".accordion-toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+
+    const expanded = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", !expanded);
+    content.hidden = expanded;
+  });
+});
 
 
