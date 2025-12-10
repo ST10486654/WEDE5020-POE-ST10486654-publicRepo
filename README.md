@@ -240,9 +240,104 @@ End of References
 ---
 © 2025 ST10486654 | CoffeeBox Project – WEDE5020 POE
 ________________________________________________________________________________________________________________________________
-2025-12-02
-These are corrections for the POE that I submitted on the 4th of November 2025.
-________________________________________________________________________________________________________________________________
+Project Enhancement Summary (Final Update — 2025-12-04)
+
+
+This repository contains the completed CoffeeBox Website Project, upgraded and refined to meet professional web development standards and fulfil all learning outcomes required for the module. Extensive improvements were implemented across the entire codebase, with deliberate focus on:
+•	HTML semantics
+•	Accessibility (WCAG 2.1 AA)
+•	CSS layout skills (Grid, Flexbox, responsiveness)
+•	JavaScript interactivity and validation
+•	User Experience and Interface Design
+•	Search Engine Optimisation (SEO)
+•	Structured Data (JSON-LD)
+•	Cross-page navigation and consistency
+•	Brand-preserving visual upgrades
+All changes were implemented without altering the CoffeeBox theme, colour palette, or brand identity. The upgrades strengthen usability, performance, structure, and professional quality while maintaining full rubric alignment.
+________________________________________
+Key Enhancements Across the Entire Site
+
+1. About Page Upgrade
+•	Added hero banner using existing theme imagery
+•	Added brand story, mission, vision, and value sections
+•	Added Meet the Team cards and milestones
+•	Added CTA linking to enquiry and products
+•	Improved semantic markup and heading hierarchy
+•	Implemented structured data (JSON-LD: CafeOrCoffeeShop)
+•	Added accessibility improvements and responsive layout
+________________________________________
+2. Contact Page Upgrade
+•	Added new hero introduction
+•	Introduced two-column responsive layout (form + business info)
+•	Added open/closed indicator powered by JavaScript
+•	Improved form accessibility + aria-live validation area
+•	Added Google Maps “Get Directions” link
+•	Added map placeholder and location details
+•	Added structured data (ContactPage)
+•	Added mobile-first breakpoints
+________________________________________
+3. Services Page Upgrade
+•	Complete redesign with professional card layout
+•	Added hero intro summarising service purpose
+•	Added four fully interactive service cards using existing images
+•	Added accessible accordion system (JS)
+•	Added contextual navigation links to products, enquiry, and contact pages
+•	Added structured data (Service schema)
+•	Added responsive grid layout using CSS Grid
+•	Added CTA section (“Need something specific?”)
+________________________________________
+4. Global CSS Enhancements
+•	Added service-card styling
+•	Added accordion styles
+•	Added team cards
+•	Added About page grid + hero
+•	Added Contact page card layout and map styling
+•	Added accessibility focus ring
+•	Added mobile responsiveness for all pages
+•	Preserved all CoffeeBox brand variables
+________________________________________
+5. JavaScript Additions
+•	Accordion system for services page
+•	Open/Closed live indicator for contact page
+•	Dynamic testimonials rendering
+•	Form validation feedback improvements
+•	Ensured all JS loads with defer for performance
+________________________________________
+6. SEO Enhancements
+•	Added unique meta titles & descriptions to every page
+•	Added JSON-LD structured data
+•	Improved heading hierarchy
+•	Added alt text to all images
+•	Added internal linking for crawlability
+•	Added robots.txt and sitemap.xml
+________________________________________
+7. Accessibility & UX Improvements
+•	aria-live regions for form feedback
+•	aria-expanded toggling on accordions
+•	Improved keyboard focus visibility
+•	Semantic sections (header, nav, main, footer)
+•	Labels tied to form controls
+•	Logical tab flow
+•	Responsive layouts for all devices
+________________________________________
+8. Repository Improvements
+•	Created CHANGELOG.md to document all project changes
+•	Updated README.md to reflect all Part 3 additions
+•	Ensured correct repo root structure for GitHub Pages
+•	Added clear commit messages following conventional commits
+________________________________________
+Final Project Status
+
+The CoffeeBox website now reflects:
+✔ professional front-end development
+✔ strong information design
+✔ robust accessibility
+✔ clear interaction patterns
+✔ good SEO practices
+✔ modern UI/UX thinking
+✔ organised source code
+✔ industry-level documentation
+
 
 
 
