@@ -371,3 +371,48 @@ function initUI() {
 
 /* Wait for DOM content */
 document.addEventListener('DOMContentLoaded', initUI);
+
+/* ---------- Contact page: open/closed indicator ----------
+   Purpose:
+   - Show users whether CoffeeBox is open right now.
+   - This improves user trust and reduces unnecessary visits.
+   Notes:
+   - This uses the client's local time.
+   - Opening hours are set to open = 6, close = 20 (6:00 to 20:00).
+   - Adjust values if your business hours differ.
+*/
+
+function setOpenStatus() {
+  // Get the element where we'll show the status. If it doesn't exist, do nothing.
+  const element = document.getElementById("openStatus");
+  if (!element) return; // guard clause
+
+  // Create a Date object -> uses the client's local timezone by default.
+  const now = new Date();
+
+  // Extract the hour (0-23). This is used to decide if the shop is open.
+  const hour = now.getHours();
+
+  // Business hours (simple integer hours). Change if CoffeeBox has different hours.
+  const open = 6;   // 6:00
+  const close = 20; // 20:00 (8pm)
+
+  // Compare current hour with opening window.
+  if (hour >= open && hour < close) {
+    // Open: show a friendly message and set color to brand yellow (for visibility).
+    element.textContent = "We are OPEN now — come through!";
+    // inline style uses CSS variable — keeps theme consistent
+    element.style.color = "var(--brand-yellow)";
+  } else {
+    // Closed: show polite closed message and use brand white for contrast.
+    element.textContent = "We are currently closed — see you tomorrow!";
+    element.style.color = "var(--brand-white)";
+  }
+}
+
+/* If you prefer the function to run automatically on pages where it's defined,
+   you can call it directly here. Alternatively call setOpenStatus() inside
+   your existing DOMContentLoaded init function (initUI) so it runs after DOM ready. */
+
+setOpenStatus(); // run immediately (safe because the script is deferred)
+
